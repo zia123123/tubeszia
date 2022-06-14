@@ -15,9 +15,20 @@ class Main {
                 "br", "bre", "brea", "ak", "problem");
 
         //bruteforce
+        long start = System.nanoTime();
+        System.out.println("BRUTE FORCE :");
         System.out.println(bruteforce.wordBreak(str1,dict));
+        long end = System.nanoTime();
+        System.out.println("Time : " + (end - start));
+
+        System.out.println("                             ");
+        long start1 = System.nanoTime();
+        System.out.println("Dynamic Programming1 :");
+         System.out.println(dynamicProgramming.wordBreak(str1,dict));
+        long end2 = System.nanoTime();
+        System.out.println("Time : " + (end2 - start1));
         //dynamicProgramming
-        System.out.println(dynamicProgramming.wordBreak(str1,dict));
+
 
     }
 }
